@@ -2225,7 +2225,7 @@ static void rd_kafka_cgrp_unassign_done (rd_kafka_cgrp_t *rkcg,
 		     "with new assignment" : "without new assignment",
                      reason);
 
-        /* Don't send Leave when termating with NO_CONSUMER_CLOSE flag */
+        /* Don't send Leave when terminating with NO_CONSUMER_CLOSE flag */
         if (rd_kafka_destroy_flags_no_consumer_close(rkcg->rkcg_rk))
                 rkcg->rkcg_flags &= ~RD_KAFKA_CGRP_F_LEAVE_ON_UNASSIGN;
 
